@@ -1,0 +1,25 @@
+%backgrounded{
+	background : {
+		repeat: no-repeat;
+		position: center;
+		size:cover;
+	}
+}
+%fullAbs{
+	position: absolute;
+	top: 0;
+	left: 0;;
+	right: 0;
+	bottom: 0;
+}
+%listNormalize{
+	padding-left: 0;
+	list-style: none;
+}
+
+%listInline{
+	display: inline-block;
+	li{
+		display: inline-block;
+	}
+}

@@ -1,0 +1,184 @@
+@charset "utf-8";
+@mixin respondTo($media) {
+    @if $media == screenxsmax {
+        @media (max-width: $smartphone - 1px) {
+            @content;
+        }
+    }
+    @else if $media == screensm {
+        @media (min-width: $smartphone) and (max-width: $tabletPortrait - 1px) {
+            @content;
+        }
+    }
+    @else if $media == screenmd {
+        @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape - 1px) {
+            @content;
+        }
+    }
+    @else if $media == screenlg {
+        @media (min-width: $tabletLandscape) and (max-width: $desktop - 1px) {
+            @content;
+        }
+    }
+     @else if $media == screenxxlgmax {
+        @media (max-width: $desktopVeryBig - 1px) {
+            @content;
+        }
+    }
+
+     @else if $media == screenxlgmax {
+        @media (max-width: $desktopBig - 1px) {
+            @content;
+        }
+    }
+
+    @else if $media == screenlgmax {
+        @media (max-width: $desktop - 1px) {
+            @content;
+        }
+    }
+    @else if $media == screensmmax {
+        @media (max-width: $tabletPortrait - 1px) {
+            @content;
+        }
+    }
+    @else if $media == screenmdmax {
+        @media (max-width: $tabletLandscape - 1px) {
+            @content;
+        }
+    }
+    @else if $media == screenlgmin {
+        @media (min-width: $desktop) {
+            @content;
+        }
+    }
+    @else if $media == screenxlgmin {
+        @media (min-width: $desktopBig) {
+            @content;
+        }
+    }
+    @else if $media == screenxxlgmin {
+        @media (min-width: $desktopVeryBig) {
+            @content;
+        }
+    }
+    @else if $media == screenxxxlgmin {
+        @media (min-width: $desktopSuperBig) {
+            @content;
+        }
+    }
+    @else if $media == screenxsmin {
+        @media (min-width: $smartphone) {
+            @content;
+        }
+    }
+    @else if $media == screensmmin {
+        @media (min-width: $tabletPortrait) {
+            @content;
+        }
+    }
+    @else if $media == screenmdmin {
+        @media (min-width: $tabletLandscape) {
+            @content;
+        }
+    }
+    @else if $media == screenipadmax {
+        @media (max-width: $ipadmax) {
+            @content;
+        }
+    }
+    @else if $media == screenipadmin {
+        @media (min-width: $ipadmax + 1) {
+            @content;
+        }
+    }
+}
+
+@mixin transitions($transition_property: all, $transition_duration: 0.2s, $transition_timing: ease-in, $transition_delay: 0s) {
+    transition: $transition_property $transition_duration $transition_timing $transition_delay;
+}
+
+@mixin closer( $size, $color: $deepBlue, $padding: 30px ) {
+    position: absolute;
+    top: $padding; right: $padding;
+    &::before, &::after {
+        content: '';
+        width: $size; height: 2px;
+        border-radius: 2px;
+        background: rgba($color, .7);
+        @include transitions;
+        display: block;
+    }
+    &::before { transform: rotate(45deg) translate(1px, 1px) }
+    &::after { transform: rotate(-45deg) translate(0px, 0px) }
+    &:hover {
+        &::before, &::after {
+            background: $color
+        }
+    }
+}
+
+@mixin links($link, $hover) {
+    color: $link;
+    @include transitions(all, 0.3s, ease, 0s);
+    &:visited {
+        color: $link;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $hover;
+    }
+}
+
+
+@mixin buttons($color, $color_hover, $link, $hover) {
+    @include transitions(all, 0.3s, ease, 0s);
+    cursor: pointer;
+    text-decoration: none;
+    color: $color;
+    background-color: $link;
+    &:visited {
+        color:$color;
+        background-color: $link;
+    }
+    &:hover,
+    &:active,
+    &:focus {
+        color: $color_hover;
+        background-color: $hover;
+    }
+}
+
+@mixin fontSize($templateFont){
+    font-size: #{100%*$templateFont/15px};
+}
+
+@mixin square($w){
+    width:$w;
+    height:$w;
+}
+
+@mixin adHeight($startHeight, $workHeight, $step, $startMedia, $mediaStep, $iteration){
+height: #{$startHeight}px;
+    @for $i from 0 through $iteration {
+        @media (min-width:#{$startMedia+$mediaStep*$i}px){
+            height: #{$workHeight + $step*$i}px;
+        }
+    }
+}
+@mixin adMinHeight($startHeight, $workHeight, $step, $startMedia, $mediaStep, $iteration){
+min-height: #{$startHeight}px;
+    @for $i from 0 through $iteration {
+        @media (min-width:#{$startMedia+$mediaStep*$i}px){
+            min-height: #{$workHeight + $step*$i}px;
+        }
+    }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
