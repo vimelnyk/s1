@@ -1,1 +1,25 @@
-$grid-gutter-width: 40px !default;
+$grid-gutter-width: 20px !default;
+
+$violet:#6250a2;
+$pink:#da1685;
+$green:#00E778;
+$blue:#0189E2;
+$yellow:#ffcf2a;
+$orange:#FF4100;
+
+$fontFamily: 'PT Sans',
+Arial,
+sans-serif;
+$fontFamilyTitle: 'PT Sans Narrow',
+Arial,
+sans-serif;
+
+//responsive
+$smartphone: 480px;
+$tabletPortrait: 768px;
+$tabletLandscape: 992px;
+$ipadmax: 1025px;
+$desktop: 1200px;
+$desktopBig: 1440px;
+$desktopVeryBig: 1600px;
+$desktopSuperBig: 1880px;

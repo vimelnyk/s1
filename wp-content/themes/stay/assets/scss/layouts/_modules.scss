@@ -1,0 +1,104 @@
+.image-item {
+    text-decoration: none;
+    .image-wrap {
+        position: relative;
+        height: 300px;
+        @include transitions;
+
+        .image {
+            @extend %fullAbs;
+        }
+
+        &:hover {
+            .image {
+                &-1 {
+                    animation: hovAnim1 4.5s ease infinite;
+                }
+
+                &-2 {
+                    animation: hovAnim2 4.5s ease infinite;
+                }
+
+                &-3 {
+                    animation: hovAnim3 4.5s ease infinite;
+                }
+            }
+        }
+    }
+
+    .text-wrap {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+}
+
+
+@keyframes hovAnim1 {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    33.333% {
+        opacity: 0;
+    }
+
+    66.6666% {
+        opacity: 0;
+    }
+}
+
+@keyframes hovAnim2 {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    33.333% {
+        opacity: 1;
+    }
+
+    66.6666% {
+
+
+        opacity: 0;
+    }
+
+
+}
+
+@keyframes hovAnim3 {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    33.333% {
+        opacity: 0;
+
+
+    }
+
+    66.6666% {
+
+
+        opacity: 1;
+
+    }
+
+
+}
+
+
+.general-listing{
+    &__head{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:5em;
+    }
+}

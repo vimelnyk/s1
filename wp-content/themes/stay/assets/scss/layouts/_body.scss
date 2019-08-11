@@ -3,100 +3,30 @@
     padding: 0;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
+
 body {
-    
+    font-size: 16px;
+    font-family: $fontFamily;
 }
 
 
-.text-center{
-    text-align: center; 
+.text-center {
+    text-align: center;
 }
-.uppercase{
+
+.uppercase {
     text-transform: uppercase;
 }
-.underline{
+
+.underline {
     text-decoration: underline;
 }
-.backgrounded{
+
+.backgrounded {
     @extend %backgrounded;
-}
-
-
-.header {
-
-    background-color: black;
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-
-    &:before {
-        content: "";
-        display: block;
-        @extend %fullAbs;
-        @extend %backgrounded;
-
-        animation: imageChange 8s infinite ease-in-out;
-        background-image: url(/img/krakow.jpg);
-        opacity: 0.8;
-    }
-
-    .intro-title {
-        position: relative;
-    }
-
-    .pseudo {
-        display: block;
-        position: absolute;
-        overflow: hidden;
-        bottom: 0;
-
-        &-1 {
-            left: 0;
-            right: 66.6666667%;
-            transform: skewY(30deg);
-            transform-origin: top left;
-
-            .pseudo-in {
-                transform: skewY(-50deg);
-                transform-origin: top left;
-                left: 0;
-                right: 0;
-            }
-        }
-
-        &-2 {
-            left: 33%;
-            right: 0;
-            transform: skewY(-12.5deg);
-            transform-origin: top right;
-
-            .pseudo-in {
-                transform: skewY(18deg);
-                transform-origin: top right;
-                left: 0;
-                right: 0;
-            }
-        }
-    }
-}
-
-@keyframes imageChange {
-    0% {
-        filter: none;
-    }
-
-    50% {
-        filter: sepia(100%);
-    }
-
-    100% {
-        filter: none;
-    }
 }

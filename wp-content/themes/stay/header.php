@@ -23,18 +23,18 @@
         </script>
 
 	</head>
+		<header id="header" class="header">
+		<div class="container">
+		
+			<div class="row justify-content-end">
+				<nav id="headerNav" class="header__nav">
+						<button type="button" id="closeMenu" class="close-menu">X</button>
+					<?php html5blank_nav();?>
+				</nav>
+
+			</div>
+		</div>
+		</header>
+	
 	<body <?php body_class(); ?>>
 
-			<header id="header" class="header backgrounded">
-		<div class="container text-center">
-		 
-			<h1 class="intro-title color-white uppercase">dfdfdf</h1>
-		</div>
-		<i class="pseudo pseudo-1 background-white">
-			<span class="pseudo pseudo-in background-blue"></span>
-		</i>
-		<i class="pseudo pseudo-2 background-white">
-			<span class="pseudo pseudo-in background-green"></span>
-		</i>
-		<i class="pseudo pseudo-3"></i>
-	</header>

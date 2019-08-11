@@ -1,0 +1,42 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    &__nav {
+        position: relative;
+        ul {
+            @include transitions;
+            transform-origin: top center;
+            background-color: #fff;
+            position: absolute;
+            top:0;
+            right: 0;        
+            transform: scale(1, 0);
+            list-style:none;
+            min-width: 160px;
+            li{
+                a{
+                    display: block;
+                    height:2rem;
+
+                }
+            }
+
+        }
+        button{
+            opacity: 1;
+        }
+
+        &:hover {
+            button{
+                opacity: 0;
+            }
+           ul {
+                transform: scale(1, 1);
+            }
+        }
+    }
+}

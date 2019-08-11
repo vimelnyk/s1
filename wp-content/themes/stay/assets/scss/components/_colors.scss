@@ -1,0 +1,60 @@
+.color {
+
+    &-white {
+        color: white;
+    }
+
+    &-black {
+        color: black;
+    }
+
+
+    &-pink {
+        color: $pink;
+    }
+
+    &-blue {
+        color: $blue;
+    }
+
+    &-green {
+
+        color: $green;
+    }
+
+    &-violet {
+        color: $violet;
+    }
+}
+
+.background {
+
+    &-white {
+        background-color: white;
+    }
+
+    &-pink {
+        background-color: $pink;
+    }
+
+    &-blue {
+        background-color: $blue;
+    }
+
+    &-orange {
+        background-color: $orange;
+    }
+
+
+    &-green {
+        background-color: $green;
+    }
+
+    &-violet {
+        background-color: $violet;
+    }
+
+    &-light-violet {
+        background-color: transparentize($violet, .9);
+    }
+}
