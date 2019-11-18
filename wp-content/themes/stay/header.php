@@ -23,10 +23,11 @@
         </script>
 
 	</head>
-		<header id="header" class="header">
+	<header id="header" class="header">
 		<div class="container">
 		
-			<div class="row justify-content-end">
+			<div class="row justify-content-between">
+				<a href="./">Apartments in Krakow</a>
 				<nav id="headerNav" class="header__nav">
 						<button type="button" id="closeMenu" class="close-menu">X</button>
 					<?php html5blank_nav();?>
@@ -34,7 +35,8 @@
 
 			</div>
 		</div>
-		</header>
+	</header>	
 	
 	<body <?php body_class(); ?>>
+		
 

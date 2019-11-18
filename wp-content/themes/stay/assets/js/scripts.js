@@ -2,13 +2,20 @@
 
 jQuery(document).ready(function ($) {   
     $('.images-slider').slick({
-        infinite: true        
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        fade: true,
+        asNavFor: '.dots-slider'              
     });
 
     $('.dots-slider').slick({
-        infinite: true,
         slidesToShow: 4,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        asNavFor: '.images-slider',      
+        arrows: true,
+        centerMode: true,
+        focusOnSelect: true
     });
 });
 

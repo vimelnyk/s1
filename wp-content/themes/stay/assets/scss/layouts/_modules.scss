@@ -1,5 +1,6 @@
 .image-item {
     text-decoration: none;
+
     .image-wrap {
         position: relative;
         height: 300px;
@@ -94,11 +95,15 @@
 }
 
 
-.general-listing{
-    &__head{
+.general-listing {
+    &__head {
         display: flex;
         justify-content: center;
         align-items: center;
-        height:5em;
+        height: 5em;
     }
+}
+
+.main-content{
+    flex:1
 }
