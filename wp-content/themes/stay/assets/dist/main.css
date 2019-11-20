@@ -3884,6 +3884,9 @@ body {
       -webkit-transform: scale(1, 1);
               transform: scale(1, 1); }
 
+.post-header {
+  margin-top: 3em; }
+
 .footer {
   display: -webkit-box;
   display: flex;

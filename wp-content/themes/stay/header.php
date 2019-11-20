@@ -23,10 +23,11 @@
         </script>
 
 	</head>
-	<header id="header" class="header">
+
+	<header id="header" class="header background-white d-flex align-items-center">
 		<div class="container">
 		
-			<div class="row justify-content-between">
+			<div class="row justify-content-between  ">
 				<a href="./">Apartments in Krakow</a>
 				<nav id="headerNav" class="header__nav">
 						<button type="button" id="closeMenu" class="close-menu">X</button>

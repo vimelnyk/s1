@@ -4,40 +4,48 @@
     left: 0;
     right: 0;
     z-index: 2;
-    height:3em;
+    height: 3em;
 
     &__nav {
         position: relative;
+
         ul {
             @include transitions;
             transform-origin: top center;
             background-color: #fff;
             position: absolute;
-            top:0;
-            right: 0;        
+            top: 0;
+            right: 0;
             transform: scale(1, 0);
-            list-style:none;
+            list-style: none;
             min-width: 160px;
-            li{
-                a{
+
+            li {
+                a {
                     display: block;
-                    height:2rem;
+                    height: 2rem;
 
                 }
             }
 
         }
-        button{
+
+        button {
             opacity: 1;
         }
 
         &:hover {
-            button{
+            button {
                 opacity: 0;
             }
-           ul {
+
+            ul {
                 transform: scale(1, 1);
             }
         }
     }
+}
+
+.post-header{
+    margin-top: 3em;
 }

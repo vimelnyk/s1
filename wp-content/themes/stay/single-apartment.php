@@ -7,6 +7,16 @@
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <section class="post-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="txt-title">Apartment Title</h1>
+                    <h2 class="txt-subtitle">Apartment Subtitle</h2>
+                </div>
+            </div>
+        </div>
+        </section>
         <section class="post-intro">
             <div class="container">
                 <div class="row">
