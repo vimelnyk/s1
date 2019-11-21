@@ -6,6 +6,7 @@ jQuery(document).ready(function ($) {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
+        dots:false,
         asNavFor: '.dots-slider'              
     });
 
@@ -14,7 +15,7 @@ jQuery(document).ready(function ($) {
         slidesToScroll: 1,
         asNavFor: '.images-slider',      
         arrows: true,
-        centerMode: true,
+        dots: false,        
         focusOnSelect: true
     });
 });

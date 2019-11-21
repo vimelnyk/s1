@@ -24,14 +24,19 @@
 }
 
 .images-slider {
-    &__item {
-        height: 500px;        
+    margin-bottom: $grid-gutter-width;
+    &>div{
+        font-size: 0;
     }
+    &__item {
+        height: 500px;
+    }    
 
     .slick-arrow {
         @extend %arrowSlider;
         width: 3em;
         height: 5em;
+        
 
         &:before {
             @extend %fullAbs;
@@ -59,8 +64,18 @@
 }
 
 .dots-slider {
+    &>div {
+        font-size: 0;
+    }
     &__item {
         height: 100px;
+    }
+    .slick-list {
+        margin: 0 -4px;
+    }
+
+    .slick-slide>div {
+        padding: 0 4px;
     }
 
     .slick-arrow {
