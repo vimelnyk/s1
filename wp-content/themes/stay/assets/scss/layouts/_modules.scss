@@ -91,3 +91,10 @@
 .main-content{
     flex:1
 }
+
+.list-cols{
+    list-style: none;
+    column-count: 3;
+    column-gap: 10px;
+
+}

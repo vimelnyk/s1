@@ -4061,6 +4061,15 @@ body {
   -webkit-box-flex: 1;
           flex: 1; }
 
+.list-cols {
+  list-style: none;
+  -webkit-column-count: 3;
+     -moz-column-count: 3;
+          column-count: 3;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px; }
+
 .color-white {
   color: white; }
 
